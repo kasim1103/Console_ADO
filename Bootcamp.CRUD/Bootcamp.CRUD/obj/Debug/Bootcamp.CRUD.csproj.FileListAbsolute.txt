@@ -11,3 +11,4 @@ C:\Users\Mr. K\documents\visual studio 2015\Projects\Bootcamp.CRUD\Bootcamp.CRUD
 C:\Users\Mr. K\documents\visual studio 2015\Projects\Bootcamp.CRUD\Bootcamp.CRUD\obj\Debug\Bootcamp.CRUD.Migrations.addingModelFirst.resources
 C:\Users\Mr. K\documents\visual studio 2015\Projects\Bootcamp.CRUD\Bootcamp.CRUD\obj\Debug\Bootcamp.CRUD.csproj.GenerateResource.Cache
 C:\Users\Mr. K\documents\visual studio 2015\Projects\Bootcamp.CRUD\Bootcamp.CRUD\obj\Debug\Bootcamp.CRUD.Migrations.addingStatusDelete.resources
+C:\Users\Mr. K\documents\visual studio 2015\Projects\Bootcamp.CRUD\Bootcamp.CRUD\obj\Debug\Bootcamp.CRUD.Migrations.addingItemFirst.resources

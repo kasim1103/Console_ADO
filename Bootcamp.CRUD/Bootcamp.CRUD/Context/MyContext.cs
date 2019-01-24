@@ -12,5 +12,6 @@ namespace Bootcamp.CRUD.Context
     {
         public MyContext() : base("Bootcamp22") { }
         public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Item> Items { get; set; }
     }
 }

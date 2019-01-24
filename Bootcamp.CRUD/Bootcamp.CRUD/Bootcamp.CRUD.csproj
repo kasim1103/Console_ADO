@@ -62,7 +62,14 @@
     <Compile Include="Migrations\201901231002445_addingStatusDelete.Designer.cs">
       <DependentUpon>201901231002445_addingStatusDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901231549029_addingItemFirst.cs" />
+    <Compile Include="Migrations\201901231549029_addingItemFirst.Designer.cs">
+      <DependentUpon>201901231549029_addingItemFirst.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\ControllerItem.cs" />
+    <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\ControllerSupplier.cs" />
     <Compile Include="Model\Supplier.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901231002445_addingStatusDelete.resx">
       <DependentUpon>201901231002445_addingStatusDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901231549029_addingItemFirst.resx">
+      <DependentUpon>201901231549029_addingItemFirst.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
