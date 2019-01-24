@@ -35,21 +35,41 @@ namespace Bootcamp.CRUD.Model
                     item.stock = Convert.ToInt16(Console.ReadLine());
                     item.InsertDate = DateTimeOffset.Now.LocalDateTime;
                     item.CreateDate = DateTimeOffset.Now.LocalDateTime;
+                    Console.Write("Insert Id Supplier : ");
+                    int? idSupplier = Convert.ToInt16(Console.ReadLine());
 
-                    _context.Items.Add(item);
-                    result = _context.SaveChanges();
-                    if (result > 0)
+                    if(idSupplier == null)
                     {
-                        Console.WriteLine("insert Successfully");
+                        Console.WriteLine("Please Insert Supplier Id");
                     }
                     else
                     {
-                        Console.WriteLine("insert Failed");
+                        var getSupplier = _context.Suppliers.Find(idSupplier);
+                        if(getSupplier == null)
+                        {
+                            Console.Write("we don't have id : " + idSupplier);
+                        }
+                        else
+                        {
+                            item.Suppliers = getSupplier;
+                            _context.Items.Add(item);
+                            result = _context.SaveChanges();
+                            if (result > 0)
+                            {
+                                Console.WriteLine("insert Successfully");
+                            }
+                            else
+                            {
+                                Console.WriteLine("insert Failed");
+                            }
+                        }
                     }
+                    Console.WriteLine("");
                     Console.WriteLine("====================================");
                     break;
 
                 case 2:
+
                     Console.WriteLine("==============Item Data=============");
                     Console.WriteLine("====================================");
                     Console.Write("Insert Id to Update Data :");
@@ -61,21 +81,41 @@ namespace Bootcamp.CRUD.Model
                     }
                     else
                     {
-                        Console.Write("Insert Name of Items : ");
+                        Console.Write("Insert Name of Item : ");
                         get.name = Console.ReadLine();
-                        Console.Write("Insert QTY Of Supplier : ");
+                        Console.Write("Insert QTY Of Item : ");
                         get.stock = Convert.ToInt16(Console.ReadLine());
                         get.UpdateDate = DateTimeOffset.Now.LocalDateTime;
-                        result = _context.SaveChanges();
-                        if (result > 0)
+                        Console.Write("Insert Id Supplier : ");
+                        int? idSupplier2 = Convert.ToInt16(Console.ReadLine());
+//                        var getDatatoDisplay2 = _context.Items.Where(x => x.IsDelete == false & x.id == id).ToList();
+
+                        if (idSupplier2 == null)
                         {
-                            Console.WriteLine("insert Successfully");
+                            Console.WriteLine("Please Insert Supplier Id");
                         }
                         else
                         {
-                            Console.WriteLine("insert Failed");
+                            var getSupplier = _context.Suppliers.Find(idSupplier2);
+                            if (getSupplier == null)
+                            {
+                                Console.Write("we don't have id : " + idSupplier2);
+                            }
+                            else
+                            {
+                                get.Suppliers= getSupplier;
+                                result = _context.SaveChanges();
+                                if (result > 0)
+                                {
+                                    Console.WriteLine("Update Successfully");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Update Failed");
+                                }
+                            }
+                            Console.WriteLine("====================================");
                         }
-                        Console.WriteLine("====================================");
                     }
                     break;
 
@@ -117,9 +157,10 @@ namespace Bootcamp.CRUD.Model
                         foreach (var tampilin in getDatatoDisplay)
                         {
                             Console.WriteLine("================================");
-                            Console.WriteLine("Name      : " + tampilin.name);
-                            Console.WriteLine("Stock     : " + tampilin.stock);
-                            Console.WriteLine("Join Date : " + tampilin.InsertDate);
+                            Console.WriteLine("Name          : " + tampilin.name);
+                            Console.WriteLine("Stock         : " + tampilin.stock);
+                            Console.WriteLine("Insert Date   : " + tampilin.InsertDate);
+                            Console.WriteLine("Nama Supplier : " + tampilin.Suppliers.Name);
                             Console.WriteLine("================================");
                         }
                         Console.WriteLine("Total Item " + getDatatoDisplay.Count);

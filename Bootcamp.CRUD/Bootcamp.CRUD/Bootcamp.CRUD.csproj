@@ -66,6 +66,10 @@
     <Compile Include="Migrations\201901231549029_addingItemFirst.Designer.cs">
       <DependentUpon>201901231549029_addingItemFirst.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901240221420_addingVirtualSupplierId.cs" />
+    <Compile Include="Migrations\201901240221420_addingVirtualSupplierId.Designer.cs">
+      <DependentUpon>201901240221420_addingVirtualSupplierId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\ControllerItem.cs" />
     <Compile Include="Model\Item.cs" />
@@ -87,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901231549029_addingItemFirst.resx">
       <DependentUpon>201901231549029_addingItemFirst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240221420_addingVirtualSupplierId.resx">
+      <DependentUpon>201901240221420_addingVirtualSupplierId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
