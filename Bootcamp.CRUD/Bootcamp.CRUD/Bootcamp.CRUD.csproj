@@ -70,11 +70,23 @@
     <Compile Include="Migrations\201901240221420_addingVirtualSupplierId.Designer.cs">
       <DependentUpon>201901240221420_addingVirtualSupplierId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901240410247_addingTransaction.cs" />
+    <Compile Include="Migrations\201901240410247_addingTransaction.Designer.cs">
+      <DependentUpon>201901240410247_addingTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901240756433_addingPrice.cs" />
+    <Compile Include="Migrations\201901240756433_addingPrice.Designer.cs">
+      <DependentUpon>201901240756433_addingPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\ControllerItem.cs" />
+    <Compile Include="Model\controllerTransaction.cs" />
+    <Compile Include="Model\ControllerTransactionItem.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Model\ControllerSupplier.cs" />
     <Compile Include="Model\Supplier.cs" />
+    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\TransactionItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -94,6 +106,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901240221420_addingVirtualSupplierId.resx">
       <DependentUpon>201901240221420_addingVirtualSupplierId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240410247_addingTransaction.resx">
+      <DependentUpon>201901240410247_addingTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240756433_addingPrice.resx">
+      <DependentUpon>201901240756433_addingPrice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -19,6 +19,7 @@ namespace Bootcamp.CRUD
             Console.WriteLine("==========Item Data==========");
             Console.WriteLine("1. Mangae Suppliers");
             Console.WriteLine("2. Manage Items");
+            Console.WriteLine("3. Transaction");
             Console.WriteLine("====================================");
             Console.Write("Pilihanmu : ");
             pilihan = int.Parse(Console.ReadLine());
@@ -33,6 +34,11 @@ namespace Bootcamp.CRUD
                 case 2:
                     ControllerItem namanyaapa = new ControllerItem();
                     namanyaapa.ManageItem();
+                    break;
+
+                case 3:
+                    controllerTransaction bingung = new controllerTransaction();
+                    bingung.ManageTransaction();
                     break;
 
                 default:
